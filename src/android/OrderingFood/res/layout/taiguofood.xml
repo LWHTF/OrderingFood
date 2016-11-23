@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/taiguo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#daaa"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/taiguofood1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+    
+    <ImageView
+        android:id="@+id/taiguof"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/taiguo_cai" />
+    
+</LinearLayout>

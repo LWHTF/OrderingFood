@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.liezh.ssh.domain.Business" table="business">
+		<id name="bid" column="bid">
+			<generator class="native"></generator>
+		</id>
+		<property name="storeName" column="storeName" length="20"></property>
+		<property name="synopsis" column="synopsis" length="300"></property>
+		<property name="phoneNum" column="phoneNum" length="20"></property>
+		<set name="menus">
+			<key column=""></key>
+			<one-to-many class="cn.liezh.ssh.domain.Menus"/>
+		</set>
+	</class>
+
+</hibernate-mapping>

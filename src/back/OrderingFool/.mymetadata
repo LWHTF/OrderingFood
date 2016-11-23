@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="OrderingFool"
+  id="myeclipse.1479345515197"
+  context-root="/OrderingFool"
+  j2ee-spec="5.0"
+  archive="OrderingFool.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
