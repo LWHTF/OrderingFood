@@ -11,7 +11,7 @@
 		<property name="synopsis" column="synopsis" length="300"></property>
 		<property name="phoneNum" column="phoneNum" length="20"></property>
 		<set name="menus">
-			<key column=""></key>
+			<key column="dno"></key>
 			<one-to-many class="cn.liezh.ssh.domain.Menus"/>
 		</set>
 	</class>

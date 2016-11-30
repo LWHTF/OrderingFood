@@ -5,9 +5,13 @@
 		<action name="product_*" class="productAction" method="{1}"></action> 
 		
 		<action name="users_*" class="usersAction" method="{1}">
-			<result name="success">/index.jsp</result>
+			<result name="success" type="redirect">/frame.jsp</result>
 			<result name="input">/index.jsp</result>
-			<result name="saveUI">/index.jsp</result>
+			<result name="saveUI">/jsp/users/add.jsp</result>
+			<result name="findAll">/jsp/users/list.jsp</result>
+			<result name="saveSuccess" type="redirectAction">users_findAll.action</result>
+			<result name="updateSuccess" type="redirectAction">users_findAll.action</result>
+			<result name="editSuccess">/jsp/users/edit.jsp</result>
 		</action>
 		
 		

@@ -34,6 +34,7 @@ public class UsersDaoImpl extends HibernateDaoSupport implements UsersDao {
 		DetachedCriteria criteria = DetachedCriteria.forClass(Users.class);
 		List<Users> list = this.getHibernateTemplate().findByCriteria(criteria,
 				begin, pageSize);
+		System.out.println("\n\n2222222222222222"+list.get(0).getPhoneNum().toString());
 		return list;
 	}
 

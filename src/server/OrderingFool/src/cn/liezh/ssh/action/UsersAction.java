@@ -36,7 +36,7 @@ public class UsersAction extends ActionSupport implements ModelDriven<Users> {
 	// 后台web页面登录的方法
 	public String login() {
 		Users existUsers = usersService.login(users);
-		if (existUsers != null) {
+		if (existUsers == null) {
 			this.addActionError("登录名或密码错误！");
 			return INPUT;
 		} else {
@@ -55,6 +55,7 @@ public class UsersAction extends ActionSupport implements ModelDriven<Users> {
 	// 后台分页查询所有用户的信息
 	public String findAll() {
 		PageBean<Users> pageBean = usersService.findByPage(currPage);
+		System.out.println("\n\n1111111111111111111---"+pageBean.getList().size());
 		ActionContext.getContext().getValueStack().push(pageBean);
 		return "findAll";
 	}
