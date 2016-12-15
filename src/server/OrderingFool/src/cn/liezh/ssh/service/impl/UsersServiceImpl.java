@@ -38,9 +38,13 @@ public class UsersServiceImpl implements UsersService {
 		pageBean.setTotalPage(num.intValue());
 		// 封装每页的内容
 		int begin = (currPage - 1) * pageSize;
-		List<Users> list = usersDao.findByPage(begin, pageSize);
+		List<Users> list = null; 
+		if(totalCount > 0)
+		{
+			list = usersDao.findByPage(begin, pageSize);
+		}
 		pageBean.setList(list);
-	//	pageBean.toString();
+		System.out.println("~~~~~~~~~~~~"+pageBean.toString());
 
 		return pageBean;
 	}

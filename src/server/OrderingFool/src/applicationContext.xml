@@ -57,6 +57,14 @@
 	<bean id="usersAction" class="cn.liezh.ssh.action.UsersAction" scope="prototype">
 		<property name="usersService" ref="usersService"></property>
 	</bean>
+	 
+	<bean id="businessAction" class="cn.liezh.ssh.action.BusinessAction" scope="prototype">
+		<property name="businessService" ref="businessService"></property>
+	</bean>
+	<bean id="menuAction" class="cn.liezh.ssh.action.MenuAction" scope="prototype">
+		<property name="menuService" ref="menuService"></property>
+	</bean>
+	 
 	
 	<!-- 配置service层的类 -->
 	<bean id="productService" class="cn.liezh.ssh.service.ProductService">
@@ -66,11 +74,25 @@
 		<property name="usersDao" ref="usersDao"></property>
 	</bean>
 	
+	<bean id="businessService" class="cn.liezh.ssh.service.impl.BusinessServiceImpl">
+		<property name="businessDao" ref="businessDao"></property>
+	</bean>
+	<bean id="menuService" class="cn.liezh.ssh.service.impl.MenuServiceImpl">
+		<property name="menuDao" ref="menuDao"></property>
+	</bean>
+	
 	<!-- 配置DAO层的类 -->
 	<bean id="productDao" class="cn.liezh.ssh.dao.ProductDao">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>	
 	<bean id="usersDao" class="cn.liezh.ssh.dao.impl.UsersDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>	
+	
+	<bean id="businessDao" class="cn.liezh.ssh.dao.impl.BusinessDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>	
+	<bean id="menuDao" class="cn.liezh.ssh.dao.impl.MenuDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>	
 	

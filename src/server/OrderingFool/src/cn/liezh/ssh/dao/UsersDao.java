@@ -7,19 +7,19 @@ import cn.liezh.ssh.domain.Users;
 
 public interface UsersDao {
 
-	Users findUserByUsernameAndPassword(Users users);
+	public Users findUserByUsernameAndPassword(Users users);
 
-	int findCount();
+	public int findCount();
 
-	List<Users> findByPage(int begin, int pageSize);
+	public List<Users> findByPage(int begin, int pageSize);
 
-	void save(Users users);
+	public void save(Users users);
 
-	Users findById(Integer uid);
+	public Users findById(Integer uid);
 
-	void update(Users users);
+	public void update(Users users);
 
-	void delete(Users users);
+	public void delete(Users users);
 
 	
 }
