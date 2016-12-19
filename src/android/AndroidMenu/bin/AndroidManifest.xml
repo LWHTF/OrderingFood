@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.main.activity"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <uses-sdk android:minSdkVersion="8"/>
+
+    <application
+            android:icon="@drawable/logo"
+            android:label="@string/app_name" android:logo="@drawable/logo">
+        <activity
+                android:name=".WelcomeActivity"
+                android:label="@string/app_name"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".InitMenuView"/>
+        <activity android:name="com.main.style.YueCai"/>
+        <activity android:name="com.main.style.LuCai"/>
+        <activity android:name="com.main.style.ChCai"/>
+        <activity android:name="com.main.style.JiuShui"/>
+        <activity android:name="com.main.style.Tangtang"/>
+        <activity android:name="com.main.style.GuoZai"/>
+        <activity android:name="com.main.menu.YueCaiMenu"/>
+        <activity android:name=".Recevier"/>
+        <activity android:name="com.main.menu.LuCaiMenu"/>
+        <activity android:name="com.main.menu.ChuanCaiMenu"/>
+        <activity android:name="com.main.menu.GuoZaiMenu"/>
+        <activity android:name="com.main.menu.TangMenu"/>
+        <activity android:name="com.main.menu.JiuShuiMenu"/>
+
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>

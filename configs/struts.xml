@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="OrderingFool" namespace="/" extends="struts-default">
+		<action name="product_*" class="productAction" method="{1}"></action> 
+		
+		<action name="users_*" class="usersAction" method="{1}">
+			<result name="success" type="redirect">/frame.jsp</result>
+			<result name="input">/index.jsp</result>
+			<result name="saveUI">/jsp/users/add.jsp</result>
+			<result name="findAll">/jsp/users/list.jsp</result>
+			<result name="saveSuccess" type="redirectAction">users_findAll.action</result>
+			<result name="updateSuccess" type="redirectAction">users_findAll.action</result>
+			<result name="editSuccess">/jsp/users/edit.jsp</result>
+			<result name="deleteSuccess" type="redirectAction">users_findAll.action</result>
+		</action>
+		
+		<action name="business_*" class="businessAction" method="{1}">
+			<result name="input">/index.jsp</result>
+			<result name="saveUI">/jsp/business/add.jsp</result>
+			<result name="findAll">/jsp/business/list.jsp</result>
+			<result name="saveSuccess" type="redirectAction">business_findAll.action</result>
+			<result name="updateSuccess" type="redirectAction">business_findAll.action</result>
+			<result name="editSuccess">/jsp/business/edit.jsp</result>
+			<result name="deleteSuccess" type="redirectAction">business_findAll.action</result>
+		</action>
+		
+		<action name="menu_*" class="menuAction" method="{1}">
+			<result name="findAll">/jsp/menu/list.jsp</result>
+		</action>
+	</package>
+</struts>    
